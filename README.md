@@ -130,10 +130,10 @@ Sebelum ke metrik evaluasi, ada istilah *confusion matrix* dimana di dalam *conf
 
 | Confusion Matrix    	| Penjelasan                                                                 	|
 |---------------------	|----------------------------------------------------------------------------	|
-| *True Positive* (TP)  	| Jumlah prediksi positif yang benar terhadap jumlah positif yang sebenarnya 	|
-| *False Positive* (FP) 	| Jumlah prediksi positif yang salah                                         	|
-| *True Negative* (TN)  	| Jumlah prediksi negatif yang benar terhadap jumlah negatif yang sebenarnya 	|
-| *False Negative* (FN) 	| Jumlah prediksi negatif yang salah                                         	|
+| *True Positive* (TP) 	| Jumlah prediksi positif yang benar terhadap jumlah positif yang sebenarnya 	|
+| *False Positive* (FP) | Jumlah prediksi positif yang salah                                         	|
+| *True Negative* (TN)  | Jumlah prediksi negatif yang benar terhadap jumlah negatif yang sebenarnya 	|
+| *False Negative* (FN) | Jumlah prediksi negatif yang salah                                         	|
 
   
 
@@ -141,6 +141,7 @@ Dalam projek ini, metrik evaluasi yang idgunakan adalah sebagai berikut.
 
 -  ***Accuracy***<br>
 	Akurasi adalah metrik yang paling umum dalam pemodelan klasifikasi. Ini adalah persentase jumlah data yang diprediksi dengan benar terhadap jumlah total data.
+    ![1](https://raw.githubusercontent.com/bzizmza/Final-Project-Recommendation-System/main/img/1.png)
 
 -  **RMSE**<br>
 	*Root Mean Squared Error* (RMSE) adalah akar dari rata-rata kesalahan kuadrat diantara nilai aktual dan nilai prediksi. Metode *Root Mean Squared Error* secara umum digunakan untuk mengecek estimasi berapa nilai kesalahan pada prediksi.
