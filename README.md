@@ -116,11 +116,11 @@ Model – model yang saya pakai dalam projek ini adalah:
 
 -  ***Content Based Filtering***<br>
 
-    *Content Based Filtering* adalah sistem rekomendasi yang merekomendasikan item sesuai dengan item yang disukai oleh pengguna di masa lampau. Pada proyek ini, digunakanlah ``TF-IDF Vectorizer`` untuk membangun sistem rekomendasi berdasarkan penulis buku, dimana ``TF-IDF`` berfungsi untuk mengukur seberapa pentingnya suatu kata terhadap kata-kata lain dalam dokumen dan metode ini sering digunakan dalam *Information Retrieval* dan *Text Mining*.
+    *Content Based Filtering* adalah sistem rekomendasi yang merekomendasikan item sesuai dengan item yang disukai oleh pengguna di masa lampau. Pada proyek ini, digunakanlah ``TF-IDF Vectorizer`` untuk membangun sistem rekomendasi berdasarkan penulis buku, dimana ``TF-IDF`` berfungsi untuk mengukur seberapa pentingnya suatu kata terhadap kata-kata lain dalam dokumen dan metode ini sering digunakan dalam *Information Retrieval* dan *Text Mining*, dan untuk mengukur model digunakan adalah metrik ``accuracy``.
 
 -  ***Collaborative Based Filtering***<br>
 
-	*Collaborative Based Filtering* adalah sistem rekomendasi berdasarkan pendapat suatu komunitas. Pada proyek ini, digunakanlah ``RecommenderNet`` dimana proses *compile* pada model menggunakan *binary crossentropy* sebagai *loss function*, *adam* sebagai *optimizer*, dan RMSE sebagai metrik dari model. Kemudian, pada proses *training model*, nilai ``batch_size`` adalah 5 dengan ``epochs`` sebanyak 20.
+	*Collaborative Based Filtering* adalah sistem rekomendasi berdasarkan pendapat suatu komunitas. Pada proyek ini, digunakanlah ``RecommenderNet`` dimana proses *compile* pada model menggunakan *binary crossentropy* sebagai *loss function*, *adam* sebagai *optimizer*, dan ``RMSE`` sebagai metrik dari model. Kemudian, pada proses *training model*, nilai ``batch_size`` adalah 5 dengan ``epochs`` sebanyak 20.
 
 
 
@@ -134,7 +134,6 @@ Sebelum ke metrik evaluasi, ada istilah *confusion matrix* dimana di dalam *conf
 | *False Positive* (FP) | Jumlah prediksi positif yang salah                                         	|
 | *True Negative* (TN)  | Jumlah prediksi negatif yang benar terhadap jumlah negatif yang sebenarnya 	|
 | *False Negative* (FN) | Jumlah prediksi negatif yang salah                                         	|
-
   
 
 Dalam projek ini, metrik evaluasi yang digunakan adalah sebagai berikut.
@@ -144,27 +143,29 @@ Dalam projek ini, metrik evaluasi yang digunakan adalah sebagai berikut.
 
     ![1](https://raw.githubusercontent.com/bzizmza/Final-Project-Recommendation-System/main/img/1.png)
 
-    Nilai akurasi didapatkan dengan membagi total buku hasil rekomendasi dengan nama dari penulis nya. Dimana buku yang di rekomendasi kan oleh sistem adalah sebagai berikut.
-    
-    ![3](https://raw.githubusercontent.com/bzizmza/Final-Project-Recommendation-System/main/img/3.png)
-
-
     Dengan hasil akurasi nya adalah:
     |               | *Content Based Filtering*     |
     |------------  	|---------------------------	|
     | *Accuracy*  	| 100%  	                    |
+
+    Nilai akurasi didapatkan dengan membagi total buku hasil rekomendasi dengan nama dari penulis nya. Dimana buku yang di rekomendasi kan oleh sistem adalah sebagai berikut.
+
+    ![3](https://raw.githubusercontent.com/bzizmza/Final-Project-Recommendation-System/main/img/3.png)
 
 -  **RMSE**<br>
 	*Root Mean Squared Error* (RMSE) adalah akar dari rata-rata kesalahan kuadrat diantara nilai aktual dan nilai prediksi. Metode *Root Mean Squared Error* secara umum digunakan untuk mengecek estimasi berapa nilai kesalahan pada prediksi.
 
     ![2](https://raw.githubusercontent.com/bzizmza/Final-Project-Recommendation-System/main/img/2.png)
 
+    Pada plot dapat dilihat bahwa data sudah goodfit dan bisa menjelaskan data tanpa terpengaruh oleh data noise. Sebab, underfitting terjadi ketika model tidak bisa melihat logika dibelakang data, hingga tidak bisa melakukan prediksi dengan tepat, baik untuk dataset training maupun dataset lain yang serupa. Underfitting model akan memiliki high loss dan akurasi rendah. Sedangkan, Overfitting terjadi karena model yang dibuat terlalu fokus pada training dataset tertentu, hingga tidak bisa melakukan prediksi dengan tepat jika diberikan dataset lain yang serupa. Overfitting biasanya akan menangkap data noise yang seharusnya diabaikan. Overfitting model akan memiliki low loss dan akurasi rendah.
     Dari grafik di atas, dapat diketahui nilai RMSE sebagai berikut.
     | *Root Mean Squared Error* (RMSE)  | *Train*   | *Test*    |
     |--------------------------------	|--------	|--------	|
     | *Collaborative Based Filtering*  	| 0.2289  	| 0.3477    |
 
+    Dimana buku yang di rekomendasi kan oleh sistem adalah sebagai berikut.
 
+    ![4](https://raw.githubusercontent.com/bzizmza/Final-Project-Recommendation-System/main/img/4.png)
   
 ## Kesimpulan
 Kesimpulan dari hasil proyek *recommendation system* ***Book Recomendation*** ini adalah sebagai berikut.
