@@ -137,14 +137,32 @@ Sebelum ke metrik evaluasi, ada istilah *confusion matrix* dimana di dalam *conf
 
   
 
-Dalam projek ini, metrik evaluasi yang idgunakan adalah sebagai berikut.
+Dalam projek ini, metrik evaluasi yang digunakan adalah sebagai berikut.
 
 -  ***Accuracy***<br>
 	Akurasi adalah metrik yang paling umum dalam pemodelan klasifikasi. Ini adalah persentase jumlah data yang diprediksi dengan benar terhadap jumlah total data.
+
     ![1](https://raw.githubusercontent.com/bzizmza/Final-Project-Recommendation-System/main/img/1.png)
+
+    Nilai akurasi didapatkan dengan membagi total buku hasil rekomendasi dengan nama dari penulis nya. Dimana buku yang di rekomendasi kan oleh sistem adalah sebagai berikut.
+    
+    ![3](https://raw.githubusercontent.com/bzizmza/Final-Project-Recommendation-System/main/img/3.png)
+
+
+    Dengan hasil akurasi nya adalah:
+    |               | *Content Based Filtering*     |
+    |------------  	|---------------------------	|
+    | *Accuracy*  	| 100%  	                    |
 
 -  **RMSE**<br>
 	*Root Mean Squared Error* (RMSE) adalah akar dari rata-rata kesalahan kuadrat diantara nilai aktual dan nilai prediksi. Metode *Root Mean Squared Error* secara umum digunakan untuk mengecek estimasi berapa nilai kesalahan pada prediksi.
+
+    ![2](https://raw.githubusercontent.com/bzizmza/Final-Project-Recommendation-System/main/img/2.png)
+
+    Dari grafik di atas, dapat diketahui nilai RMSE sebagai berikut.
+    | *Root Mean Squared Error* (RMSE)  | *Train*   | *Test*    |
+    |--------------------------------	|--------	|--------	|
+    | *Collaborative Based Filtering*  	| 0.2289  	| 0.3477    |
 
 
   
